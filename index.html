@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day 1 Revision of HTML (Flexbox Version)</title>
+  <style>
+    body {
+      color: azure;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      position: relative;
+    }
+   
+
+    .bg-video {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      top: 0;
+      left: 0;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    header {
+      margin-top: 20px;
+      text-align: center;
+      top: 20px;
+      color: beige;
+      font-size: 4rem;
+      display: flex;
+      transition: 0.9 ease-in;
+      justify-content: center;
+    }
+    .content {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #midbox {
+      background: rgb(114, 122, 0);
+      box-shadow: -8px -10px 14px rgba(0,0,0,1);
+      border-radius: 10px;
+      padding: 30px;
+      width: 400px;
+      text-align: center;
+      font-size: 24px;
+      opacity: 0.8;
+      display: flex;
+      justify-content: center;
+      transition: 0.5 ease;
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      opacity: 0.7;
+    }
+
+    .link-btn {
+      background: rgb(86, 97, 97);
+      color: brown;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.9);
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .link-btn:hover {
+      background: rgb(69, 21, 103);
+      color: white;
+    }
+
+    .white-btn {
+      background: white;
+      color: brown;
+      outline: dotted;
+    
+    }
+    #midbox:hover {
+      transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(102, 78, 208, 0.5);}
+  header:hover {
+    transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(102, 78, 208, 0.5);
+  }
+  .call {
+    background-color: yellow;
+    color: black;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    display: flex;
+    
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: 0.5 ease-in-out;
+    
+  }
+  .call:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(20, 158, 213);
+  }
+  </style>
+
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+      if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I") || (e.ctrlKey && e.key === "U")) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</head>
+
+<body>
+
+  <video class="bg-video" autoplay loop muted>
+    <source src="vid/𝙢𝙚 𝙜𝙪𝙨𝙩𝙖𝙨 𝙩𝙪.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="overlay"></div>
+
+  <header>Revising my Old skills of HTML</header>
+  <div class="content">
+  
+
+  <div id="midbox">
+    Welcome to Sam's Website 😘<br>
+    Not even in college yet (IN)
+  </div>
+
+  <div class="links">
+    <a href="Internal link for personal details.html" class="link-btn white-btn" target="_blank">My Details</a>
+    <a href="GiveMeAllUrInfo.html" class="link-btn" target="_blank">PLEASE FILL THIS FORM 🤤🤤</a>
+    <a href="https://youtube.com" class="link-btn" target="_blank">YouTube For Fun</a>
+  </div>
+  </div>
+  <div class="call">
+     <a href="http://www.instagram.com/akarsh.26/" target="_blank"> Contact me </a>
+  </div>
+  
+
+</body>
+</html>
